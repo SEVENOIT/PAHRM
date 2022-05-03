@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TableRow
+            android:id="@+id/r8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/InvoiceID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/RosterID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/Job"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/Paycycle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp">
+
+            <TextView
+                android:id="@+id/WorkedHours"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill|top"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:id="@+id/HourRate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="120dp">
+
+            <TextView
+                android:id="@+id/Tax"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp">
+
+            <TextView
+                android:id="@+id/GrossPayment"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="17sp" />
+        </TableRow>
+    </RelativeLayout>
+
+</RelativeLayout>

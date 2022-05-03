@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/job"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="90dp"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="145dp">
+
+            <TextView
+                android:id="@+id/timedate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill|top"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="220dp">
+
+            <TextView
+                android:id="@+id/RosterID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="17sp" />
+        </TableRow>
+    </RelativeLayout>
+
+</RelativeLayout>

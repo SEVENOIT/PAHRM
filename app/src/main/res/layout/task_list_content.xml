@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:id="@+id/r11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Roster ID"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/job"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:id="@+id/sasa"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Job"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/startBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/start_end"
+                android:shadowColor="@color/colorPrimary"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="Clock In" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="110dp">
+
+            <TextView
+                android:id="@+id/des1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/endBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/start_end"
+                android:radius="@android:dimen/app_icon_size"
+                android:shadowColor="@color/colorPrimary"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="Clock out" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r1sds2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="180dp">
+
+            <TextView
+                android:id="@+id/sasasaa"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="210dp">
+
+            <TextView
+                android:id="@+id/timedate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill|top"
+                android:textSize="17sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r12d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="250dp">
+
+            <TextView
+                android:id="@+id/sccasa"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="290dp">
+
+            <TextView
+                android:id="@+id/RosterID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="17sp" />
+        </TableRow>
+
+    </RelativeLayout>
+
+</RelativeLayout>

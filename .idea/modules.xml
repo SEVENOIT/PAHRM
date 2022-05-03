@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutomatedPayroll.iml" filepath="$PROJECT_DIR$/AutomatedPayroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AutomatedPayroll.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AutomatedPayroll.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jtds-1.2.7_new/AutomatedPayroll.jtds-1.2.7_new.iml" filepath="$PROJECT_DIR$/.idea/modules/jtds-1.2.7_new/AutomatedPayroll.jtds-1.2.7_new.iml" />
+    </modules>
+  </component>
+</project>

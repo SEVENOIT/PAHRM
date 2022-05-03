@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:textColor="@color/Dblue"
+                android:textSize="30sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="@string/info"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp">
+
+
+                <!--Email_Id-->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pname1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pname2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pdob1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/dob"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pdob2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pcountry1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/country"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pcountry2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pnic1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/nic"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+
+                <!--Password-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pnic2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pemail1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/email"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pemail2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pmobile1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/tel"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pmobile2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="@string/EmployeeInfo"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp">
+
+
+                <!--Email_Id-->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/CompanyID1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/Cname"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/CompanyID2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/eid1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/eid"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/eid2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/paycycle1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/paycycle"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/paycycle2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+
+                <!--Password-->
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pavailable1"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:text="@string/available"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Pavailable2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="120dp"
+                        android:background="@drawable/start_end"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:typeface="serif" />
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
