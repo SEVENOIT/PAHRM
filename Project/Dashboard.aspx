@@ -427,18 +427,18 @@
 			</div>
 			</div>
 		</div>
-			<footer class="footer">
+		<%--	<footer class="footer">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-6 footer-copyright">
-							<p class="mb-0">Copyright 2021-22 © viho All rights reserved.</p>
+							<p class="mb-0">Copyright 2022 ©SevenOIT All rights reserved.</p>
 						</div>
 						<div class="col-md-6">
 							<div class="pull-right mb-0"><img class="img-fluid" src="../assets/images/pharm3.png" alt="" width="60" height="30"></div>
 						</div>
 					</div>
 				</div>
-			</footer>
+			</footer>--%>
 			<!-- latest jquery-->
 			<script src="../assets/js/jquery-3.5.1.min.js"></script>
 			<!-- feather icon js-->

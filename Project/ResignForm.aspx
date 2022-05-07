@@ -87,7 +87,7 @@
 
 
 
-	<footer class="footer">
+<%--	<footer class="footer">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 footer-copyright">
@@ -98,7 +98,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer>--%>
 
 	<!-- latest jquery-->
 	<script src="../assets/js/jquery-3.5.1.min.js"></script>

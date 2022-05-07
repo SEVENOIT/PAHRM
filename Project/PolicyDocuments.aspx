@@ -194,7 +194,7 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer footer-fix">
+		<%--	<footer class="footer footer-fix">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-6 footer-copyright">
@@ -205,7 +205,7 @@
 						</div>
 					</div>
 				</div>
-			</footer>
+			</footer>--%>
 		</div>
 	</div>
 

@@ -82,6 +82,7 @@
 	<script src="../assets/js/script.js"></script>
 	<!-- login js-->
 	<!-- Plugin used-->
+
 </head>
 <body>
 	<form runat="server">
@@ -279,14 +280,14 @@
 										</a>
 										<ul class="nav-submenu menu-content">
 											<li>
-												<asp:Button ID="jobPosting" runat="server" OnClick="JobPosting" class="btn btn-outline-light txt-dark" Style="margin: 10px;" Text="Multi channel Job Posting" /></li>
+												<asp:Button ID="jobPosting" runat="server" OnClick="JobPosting" class="btn btn-outline-light  txt-dark" Style="margin: 10px;" Text="Multi channel Job Posting" /></li>
 											<li>
-												<asp:Button ID="interviewmanagement" runat="server" OnClick="AutomatedRecruiting" class="btn btn-outline-light txt-dark" Style="margin: 10px;" /></li>
+												<asp:Button ID="interviewmanagement" runat="server" OnClick="AutomatedRecruiting" class="btn btn-outline-light txt-dark" Style="margin: 10px;text-align:left;" /></li>
 
 											<li>
-												<asp:Button ID="onBoarding" runat="server" OnClick="OnBoarding" class="btn btn-outline-light txt-dark" Style="margin: 10px;" /></li>
+												<asp:Button ID="onBoarding" runat="server" OnClick="OnBoarding" class="btn btn-outline-light txt-dark" Style="margin: 10px;text-align:left;" /></li>
 											<li>
-												<asp:Button ID="allowances" runat="server" OnClick="Allowances" class="btn btn-outline-light txt-dark" Style="margin: 10px;" /></li>
+												<asp:Button ID="allowances" runat="server" OnClick="Allowances" class="btn btn-outline-light txt-dark" Style="margin: 10px;text-align:left;" /></li>
 											<li>
 												<asp:Button ID="LMS" runat="server" OnClick="LMS_Click" class="btn btn-outline-light txt-dark" Style="margin: 10px;" /></li>
 
@@ -411,7 +412,18 @@
 		</asp:ContentPlaceHolder>
 	</form>
 
-
+	<footer class="footer" >
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6 footer-copyright">
+							<p class="mb-0">Copyright 2022 ©SevenOIT All rights reserved.</p>
+						</div>
+						<div class="col-md-6">
+							<div class="pull-right mb-0"><img class="img-fluid" src="../assets/images/pharm3.png" alt="" width="60" height="30"></div>
+						</div>
+					</div>
+				</div>
+			</footer>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 									<div class="theme-form" runat="server">
 										<div class="mb-3">
 											<label class="col-form-label pt-0" for="exampleInputEmail1">Job Status</label>
-											<asp:DropDownList class="form-control" ID="TextBox2" runat="server"  >
+											<asp:DropDownList class="form-control" ID="TextBox2" runat="server">
 												<asp:ListItem Selected="True" Value=""></asp:ListItem>
 												<asp:ListItem Value="Completed">Completed</asp:ListItem>
 												<asp:ListItem Value="Not Completed">Not Completed</asp:ListItem>
@@ -30,12 +30,12 @@
 										</div>
 										<div class="mb-3">
 											<label class="col-form-label pt-0" for="exampleInputEmail1">Start Date</label>
-											<asp:TextBox class="form-control" type="date" ID="TextBox1" runat="server"  >
+											<asp:TextBox class="form-control" type="date" ID="TextBox1" runat="server">
 											</asp:TextBox>
 										</div>
 										<div class="mb-3">
 											<label class="col-form-label pt-0" for="exampleInputEmail1">End Date</label>
-											<asp:TextBox class="form-control" type="date" ID="TextBox3" runat="server"  >
+											<asp:TextBox class="form-control" type="date" ID="TextBox3" runat="server">
 											</asp:TextBox>
 										</div>
 										<div class="card-footer">
@@ -70,10 +70,8 @@
 		</div>
 
 
-	</div>
-	</div>
 
-		<footer class="footer footer-fix">
+		<%--		<footer class="footer footer-fix">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 footer-copyright">
@@ -84,7 +82,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer>--%>
 	</div>
 	<!-- latest jquery-->
 	<script src="../assets/js/jquery-3.5.1.min.js"></script>

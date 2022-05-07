@@ -182,7 +182,7 @@
 
 
 
-			<div class="sub-footer">
+		<%--	<div class="sub-footer">
 				<div class="custom-container">
 					<div class="row">
 						<div class="col-md-6 col-sm-2">
@@ -197,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>--%>
 			<!--footer end-->
  	</form>
 	<!-- latest jquery-->
