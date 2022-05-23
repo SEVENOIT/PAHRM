@@ -185,6 +185,12 @@
 												</tr>
 											</table>
 										</div>
+										<div class="card-footer">
+												<asp:Button ID="add" class="btn btn-primary" runat="server" Text="Send"  OnClick="Button1_Click" ></asp:Button>
+
+												<asp:Button OnClick="Reset" runat="server"  class="btn btn-secondary" Text="Reset"></asp:Button>
+												<asp:Button Enabled="false" ID="back" runat="server"  class="btn btn-warning" Text="Go back"  ></asp:Button>
+											</div>
 									</div>
 								</div>
 							</div>

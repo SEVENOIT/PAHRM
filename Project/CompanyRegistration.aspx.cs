@@ -32,26 +32,6 @@ public partial class CompanyRegistration : System.Web.UI.Page
         }
         con.Close();
 
-
-
-        //string constr = ConfigurationManager.ConnectionStrings["binddropdown"].ToString();
-        //SqlConnection con1 = new SqlConnection(constr);
-        //con1.Open();
-
-        //SqlCommand cmd1 = new SqlCommand("SELECT * " +
-        //    "FROM Business ", con1);
-        //// table name   
-
-        //cmd1.CommandType = CommandType.Text;
-        //cmd1.Connection = con1;
-
-        //DropDownList2.DataSource = cmd1.ExecuteReader();
-        //DropDownList2.DataTextField = "Business";
-        //DropDownList2.DataValueField = "Business";
-        //DropDownList2.DataBind();
-        //DropDownList2.Items.Insert(0, new ListItem("", ""));
-
-        //con1.Close();
     }
 
     protected void Validate(object sender, EventArgs e)
@@ -73,78 +53,34 @@ public partial class CompanyRegistration : System.Web.UI.Page
 
     protected void Button1_Click()
     {
-        string OTP = "";
-        string membership = "";
-        string opt = TextBox6.Text;
-        SqlCommand cmd1 = new SqlCommand("SELECT * FROM OTP WHERE OTP = '" + opt + "'", con);
-        SqlDataReader sqlDataReader;
-
-        con.Open();
-        sqlDataReader = cmd1.ExecuteReader();
-
-        while (sqlDataReader.Read())
-        {
-            OTP = sqlDataReader.GetString(sqlDataReader.GetOrdinal("OTP")).ToString();
-            TextBox8.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("UserLevel")).ToString();
-            TextBox2.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyName")).ToString();
-            TextBox7a.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyReg")).ToString();
-            TextBox16.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("StartDate")).ToString();
-            // TextBox17.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("EndDate")).ToString();
-
-            Debug.WriteLine("ghjf");
-
-
-        }
-        con.Close();
-        if (TextBox6.Text == OTP)
-
-        {
-            AddData();
-
-        }
-        else
-        {
-
-
-
-
-            string script = "<script language=\"javascript\" type=\"text/javascript\">alert(sdda);</script>";
-            Response.Write(script);
-            Response.Redirect(Request.Url.AbsoluteUri);
-
-        }
-
-    }
-
-    private void AddData()
-    {
         SqlDataReader sqlDataReader;
         SqlCommand cmd = new SqlCommand("SET IDENTITY_INSERT Company ON" +
             " Insert Into Company(" +
           "CID," +
           "Company_Name," +
           "Country," +
+          "Reg_No," +
           "Tel," +
           "CompanyEmail," +
           "Eaddress," +
-          "Admin_Password," +
-
+          "Password," +
           "Description," +
-
-          "AdminEmail," +
-          "HREmail," +
-          "FinanceEmail," +
-          "OTP," +
-          "Reg_No," +
           "Membership," +
           "StartDate," +
-          "WorkingDays )" +
+          "EndDate," +
+          "WorkingDays," +
+          "EPF1," +
+          "EPF2," +
+          "ETF," +
+          "PurchaseStatus )" +
           "Values ('"
           + TextBox1.Text +
           "','"
           + TextBox2.Text +
           "','"
           + TextBox3.Text +
+          "','"
+          + TextBox7a.Text +
           "','"
           + TextBox5.Text +
           "','"
@@ -158,22 +94,22 @@ public partial class CompanyRegistration : System.Web.UI.Page
           + DropDownList2.Text +
 
           "','"
-          + TextBox15.Text +
-          "','"
-          + TextBox14.Text +
-          "','"
-          + TextBox12.Text +
-          "','"
-          + TextBox6.Text +
-          "','"
-          + TextBox7a.Text +
-          "','"
           + TextBox8.Text +
           "','"
           + TextBox16.Text +
           "','"
-
+          + TextBox17.Text +
+          "','"
           + TextBox19.Text +
+          "','"
+          + "8" +
+          "','"
+          + "12" +
+          "','"
+          + "3" +
+          "','"
+
+          + TextBox7.Text +
 
 
           "')SET IDENTITY_INSERT Employee OFF ", con);
@@ -184,13 +120,15 @@ public partial class CompanyRegistration : System.Web.UI.Page
 
         con.Open();
 
-        SqlCommand com = new SqlCommand("Delete from OTP WHERE OTP = '" + TextBox6.Text + "'", con);
+        SqlCommand com = new SqlCommand("Delete from OTP WHERE CompanyReg = '" + TextBox7a.Text + "'", con);
         // table name   
         sqlDataReader = com.ExecuteReader();
 
         con.Close();
-        Response.Redirect("HrDashboard.aspx");
+        Response.Redirect("Login.aspx");
+
     }
+ 
 
 
 
@@ -209,14 +147,12 @@ public partial class CompanyRegistration : System.Web.UI.Page
         while (sqlDataReader.Read())
         {
             OTP = sqlDataReader.GetString(sqlDataReader.GetOrdinal("OTP")).ToString();
-            membership = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Userlevel")).ToString();
+            membership = sqlDataReader.GetString(sqlDataReader.GetOrdinal("packageType")).ToString();
             TextBox2.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyName")).ToString();
             TextBox7a.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyReg")).ToString();
             TextBox16.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("StartDate")).ToString();
-            //TextBox17.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("EndDate")).ToString();
-            Debug.WriteLine("ghjf");
-            Debug.WriteLine(membership);
-
+            TextBox17.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("DueDate")).ToString();
+            TextBox7.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Ptype")).ToString();
 
         }
         con.Close();
@@ -268,5 +204,10 @@ public partial class CompanyRegistration : System.Web.UI.Page
         string UserID = TextBox1.Text;
         Application["UserID"] = UserID;
         Response.Redirect("CompanyLeaveEntitlement.aspx");
+    }
+
+    protected void Reset(object sender, EventArgs e)
+    {
+
     }
 }

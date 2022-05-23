@@ -34,15 +34,21 @@ select * from LeaveManagmentDetails
 select * from Allowances
 select * from ReportIncident
 select * from ResourceFiles
+select * from Package
 
-CREATE TABLE PolicyDocuments
+drop table MImage
+
+
+delete from LeaveManagment where CID = '1005'
+
+CREATE TABLE Package
 (
-DocID int IDENTITY(1,1) primary key,
-CID int,
-Name varchar(50) NOT NULL,
-ContentType nvarchar(200) NULL,
-Data varbinary (max) NULL,
+PID int IDENTITY(1,1) primary key,
+Pname varchar(30),
+PricePerEmp varchar(100),
 );
+
+
 select distinct e.EID,e.Ename,r.RosterID,r.JLocation,r.Job,r.JobStatus
             from Roster r,Employee e
             Where e.CompanyID = '1003' And CAST(r.Roster_Cycle AS DATE) = CAST('2022-04-24' AS DATE) and r.EID = e.EID
@@ -393,3 +399,8 @@ SELECT distinct r.*,e.Ename From Roster r,Employee e WHERE
                       r.EID = e.EID
 
 SELECT distinct r.*,e.Ename From Roster r,Employee e 
+
+
+Select * 
+from AddCompany
+FOR JSON AUTO

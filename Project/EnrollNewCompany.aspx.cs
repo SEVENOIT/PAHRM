@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
@@ -13,81 +14,45 @@ public partial class EnrollNewCompany : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        /* btnExport.Visible = false;*/
-        string TID = "3";
-        TextBox1.Text = TID;
-        string constr = ConfigurationManager.ConnectionStrings["binddropdown"].ToString();
-
-        SqlConnection con = new SqlConnection(constr);
-
-        con.Open();
-
-        SqlCommand cmd1 = new SqlCommand("(SELECT * " +
-           "FROM AddCompany " +
-           "WHERE TrackID = '" + TID + "')", con);
-        SqlDataReader sqlDataReader;
-
-
-        sqlDataReader = cmd1.ExecuteReader();
-
-        while (sqlDataReader.Read())
+        if (!Page.IsPostBack)
         {
-            TextBox1.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyReg")).ToString();
-            TextBox6.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyName")).ToString();
-            TextBox4.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email")).ToString();
-            TextBox2.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Userlevel")).ToString();
-            TextBox3.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("EmpPrice")).ToString();
-            TextBox8.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("StartDate")).ToString();
-            TextBox5.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("EndDate")).ToString();
-            TextBox9.Text = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("Count")).ToString();
-            /*            TextBox7.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Tax")).ToString();
-            */
+            string TrackID = Application["TrackID"].ToString();
+            Application["TrackID"] = TrackID;
 
+            SqlCommand cmd1 = new SqlCommand("SELECT * FROM OTP WHERE TrackID = '" + TrackID + "'", con);
+            SqlDataReader sqlDataReader;
+
+            con.Open();
+            sqlDataReader = cmd1.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                reg.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyReg")).ToString();
+                name.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("CompanyName")).ToString();
+                email.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email")).ToString();
+                pType.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("packageType")).ToString();
+                price.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Price")).ToString();
+                sdate.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("StartDate")).ToString();
+                ddate.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("DueDate")).ToString();
+                purType.Text = sqlDataReader.GetString(sqlDataReader.GetOrdinal("pType")).ToString();
+
+            }
+            con.Close();
         }
-        con.Close();
-        /* con.Open();
-         SqlCommand com = new SqlCommand("SELECT Tax FROM Company WHERE CID = '" + UserID + "'", con);
-         // table name   
-         com.CommandType = CommandType.Text;
-         com.Connection = con;
-         TextBox2.Text = (string)com.ExecuteScalar();
-
-         con.Close();*/
     }
-
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand(" Insert Into OTP(" +
-       "OTP," +
-       "Userlevel," +
-       "CompanyReg," +
-       "CompanyName," +
-       "Startdate," +
-       "Enddate," +
-       "Price," +
-       "Email)" +
+        string TrackID = Application["TrackID"].ToString();
+        Application["TrackID"] = TrackID;
 
-       "Values ('"
-       + TextBox7.Text +
-       "','"
-        + TextBox1.Text +
-       "','"
-        + TextBox1.Text +
-       "','"
-        + TextBox6.Text +
-       "','"
-        + TextBox8.Text +
-       "','"
-       + TextBox5.Text +
-        "','"
-       + TextBox3.Text +
-        "','"
-       + TextBox4.Text +
-       "') ", con);
+        SqlCommand cmd = new SqlCommand("UPDATE OTP " +
+            "SET OTP = '" + otp.Text + "' " +
+            "WHERE TrackID = '" + TrackID + "'", con);
+
         con.Open();
         cmd.ExecuteNonQuery();
         con.Close();
-        Response.Redirect("SuperAdmin.aspx");
+        Response.Redirect("newCompanyEnrollments.aspx");
 
         /*SmtpSection smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
         using (MailMessage mm = new MailMessage(smtpSection.From, txtTo.Text.Trim()))
@@ -110,10 +75,11 @@ public partial class EnrollNewCompany : System.Web.UI.Page
     }
 
 
-    protected void Interview(object sender, EventArgs e)
+
+    protected void Reset(object sender, EventArgs e)
     {
-        string UserID = "1001";
-        Application["UserID"] = UserID;
-        Response.Redirect("NewApplications.aspx");
+        otp.Text = "";
+        Response.Redirect(Request.Url.AbsoluteUri);
     }
+     
 }

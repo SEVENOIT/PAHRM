@@ -14,13 +14,23 @@ public partial class package_bacis : System.Web.UI.Page
 
     protected void trail_Click(object sender, EventArgs e)
     {
-        string status = "trail";
+        string status = "Trial";
+        Application["status"] = status;
+
+        string package = "Basic";
+        Application["package"] = package;
+
+        Response.Redirect("PreliminaryRegistration.aspx");
 
     }
 
     protected void basic_Click(object sender, EventArgs e)
     {
-        string status = "basic";
+        string status = "Purchased";
+        Application["status"] = status;
+        string package = "Basic";
+        Application["package"] = package;
+        Response.Redirect("PreliminaryRegistration.aspx");
 
     }
 }

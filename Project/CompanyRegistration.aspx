@@ -60,21 +60,42 @@
 										 <h4 style="text-align:center">Company Registration Form</h4>
 									</div>
 									<div class="card-body">
-										<form class="theme-form">
-											<h5>Company Info</h5>
+										<div class="theme-form">
+											<h5>Package Information</h5>
 											<hr />
 											<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Enter OneTime Password</label>
 												<div class="col-sm-9">
-													<asp:TextBox ID="TextBox6" class="form-control" runat="server" ToolTip="Enter password that provided on purchasing" AutoPostBack="true"></asp:TextBox>
+													<asp:TextBox ID="TextBox6" class="form-control" runat="server" ToolTip="Enter password that provided on purchasing" AutoPostBack="true" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
 												</div>
 											</div>
 											<div class="mb-3 row">
-												<label class="col-sm-3 col-form-label" for="inputPassword3">Membership</label>
+												<label class="col-sm-3 col-form-label" for="inputPassword3">Selected Package</label>
 												<div class="col-sm-9">
 													<asp:TextBox class="form-control" id="TextBox8" readonly="true" runat="server" type="text" />
 												</div>
 											</div>
+											<div class="mb-3 row">
+												<label class="col-sm-3 col-form-label" for="inputPassword3">Version</label>
+												<div class="col-sm-9">
+													<asp:TextBox class="form-control" id="TextBox7" readonly="true" runat="server" type="text" />
+												</div>
+											</div>
+											<div class="mb-3 row">
+												<label class="col-sm-3 col-form-label" for="inputPassword3">Start Date</label>
+												<div class="col-sm-9">
+													<asp:TextBox class="form-control" id="TextBox16" runat="server"  readonly="true" type="text" />
+												</div>
+											</div>
+											<div class="mb-3 row">
+												<label class="col-sm-3 col-form-label" for="inputPassword3">Next Due Date</label>
+												<div class="col-sm-9">
+													<asp:TextBox class="form-control" id="TextBox17" runat="server"  readonly="true" type="text" />
+												</div>
+											</div>
+											<h5>Company Info</h5>
+											<hr />
+
 											<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Employer ID</label>
 												<div class="col-sm-9">
@@ -93,18 +114,13 @@
 													<asp:TextBox class="form-control" id="TextBox7a" runat="server" readonly="true" type="text" />
 												</div>
 											</div>
-											<div class="mb-3 row">
+											<%--<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Employee Count</label>
 												<div class="col-sm-9">
 													<asp:TextBox class="form-control" id="TextBox24" runat="server"  readonly="true" type="text" />
 												</div>
-											</div>
-											<div class="mb-3 row">
-												<label class="col-sm-3 col-form-label" for="inputPassword3">Start Date</label>
-												<div class="col-sm-9">
-													<asp:TextBox class="form-control" id="TextBox16" runat="server"  readonly="true" type="text" />
-												</div>
-											</div>
+											</div>--%>
+											 
 											<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Country</label>
 												<div class="col-sm-9">
@@ -131,7 +147,7 @@
 													<asp:TextBox class="form-control" id="TextBox14" runat="server" type="text" />
 												</div>
 											</div>
-											<div class="mb-3 row">
+											<%--<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Admin Email</label>
 												<div class="col-sm-9">
 													<asp:TextBox class="form-control" id="TextBox15" runat="server" type="text" />
@@ -148,7 +164,7 @@
 												<div class="col-sm-9">
 													<asp:TextBox class="form-control" id="TextBox10" runat="server" type="text" />
 												</div>
-											</div>
+											</div>--%>
 											<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">Address</label>
 												<div class="col-sm-9">
@@ -163,12 +179,12 @@
 													<asp:TextBox class="form-control" id="DropDownList2" maxlength="500" runat="server" rows="2" />
 												</div>
 											</div>
-											<div class="mb-3 row">
+											<%--<div class="mb-3 row">
 												<label class="col-sm-3 col-form-label" for="inputPassword3">What industry you belong to</label>
 												<div class="col-sm-9">
 													<asp:TextBox class="form-control" id="DropDownList1" maxlength="500" runat="server" rows="2" />
 												</div>
-											</div>
+											</div>--%>
 											<h5>Leave Managment</h5>
 											<hr />
 											<div class="mb-3 row">
@@ -209,10 +225,11 @@
 												</div>
 											</div>
 											<div class="card-footer">
-												<button class="btn btn-primary">Submit</button>
-												<button class="btn btn-secondary">Reset</button>
+												<asp:Button class="btn btn-primary" runat="server" Text="Send"  OnClick="Validate"></asp:Button>
+
+												<asp:Button OnClick="Reset" runat="server"  class="btn btn-secondary" Text="Reset"></asp:Button>
 											</div>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
