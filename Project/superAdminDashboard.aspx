@@ -278,7 +278,7 @@
 										<div class="align-self-center text-center"><i data-feather="database"></i></div>
 										<div class="media-body">
 											<span class="m-0">New Users</span>
-											<h4 class="mb-0 counter">6659</h4>
+											<h4 class="mb-0 counter">10</h4>
 											<i class="icon-bg" data-feather="database"></i>
 										</div>
 									</div>
@@ -292,7 +292,7 @@
 										<div class="align-self-center text-center"><i data-feather="shopping-bag"></i></div>
 										<div class="media-body">
 											<span class="m-0">Companies</span>
-											<h4 class="mb-0 counter">9856</h4>
+											<h4 class="mb-0 counter">20</h4>
 											<i class="icon-bg" data-feather="shopping-bag"></i>
 										</div>
 									</div>
@@ -306,7 +306,7 @@
 										<div class="align-self-center text-center"><i data-feather="message-circle"></i></div>
 										<div class="media-body">
 											<span class="m-0">Employees</span>
-											<h4 class="mb-0 counter">893</h4>
+											<h4 class="mb-0 counter">500</h4>
 											<i class="icon-bg" data-feather="message-circle"></i>
 										</div>
 									</div>

@@ -136,7 +136,7 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<asp:Button ID="Button1" runat="server" Text="Submit" CssClass="btn btn-primary" />
+					<asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" CssClass="btn btn-primary" />
 
 				</div>
 			</div>

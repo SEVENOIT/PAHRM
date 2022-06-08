@@ -795,14 +795,14 @@ Select (CASE WHEN r.JobStatus = 'Completed' THEN 'Completed' END) as Completed,
      COUNT(CASE WHEN r.JobStatus = 'Not Completed' THEN 'Not Completed' END) as NotCompleted
 From Roster r, Employee e
 
-CREATE TRIGGER updateModifiedIncident
-ON ApplyJobs
+CREATE TRIGGER updateModified
+ON [EmpPayroll].[ApplyJobs]
 AFTER UPDATE 
 AS
-   UPDATE ApplyJobs
+   UPDATE [EmpPayroll].[ApplyJobs]
    SET Modified = SYSDATETIME()
    FROM Inserted i
-   WHERE ApplyJobs.TEID = i.TEID
+   WHERE [EmpPayroll].[ApplyJobs].TEID = i.TEID
 
 drop trigger updateModified
 
@@ -810,13 +810,51 @@ UPDATE ApplyJobs
 SET   Status='Employee Filled The Form' 
 WHERE TEID = '11'
 
-CREATE TABLE Resign
+CREATE TABLE Planner
 (
-RID int IDENTITY(1,1),
-EID int NOT NULL,
-Ename varchar(100),
-To_ varchar(100),
-From_ varchar(100),
-Subject_ varchar(100),
-Body varchar(500)
+PID int IDENTITY(1,1) primary key,
+CID int NOT NULL,
+Task varchar(500),
+Subtask varchar(500),
+Dailytarget varchar(500),
+StartDate Date,
+EndDate Date,
+Assignto varchar(500)
+
+FOREIGN KEY (CID) REFERENCES Company(CID)
 );
+
+Select * from Employee
+
+ALTER TABLE Work
+ADD FOREIGN KEY (EID) REFERENCES Employee(EID);
+
+alter table Employee nocheck constraint all
+delete from [UploadResume]
+alter table Employee check constraint all
+
+
+select *
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME='JobContractCasual'
+
+SELECT *
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = N'JobPublish'
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES
+WHERE  TABLE_CATALOG='EmpPayroll'
+
+USE EmpPayroll
+GO 
+SELECT *
+FROM sys.Tables
+GO
+
+Drop table Business
+Drop table JobContract
+Drop table JobContractT
+Drop table JobPublish
+Drop table Jobs
+Drop table Leave

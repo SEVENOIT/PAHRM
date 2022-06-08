@@ -35,6 +35,12 @@ select * from Allowances
 select * from ReportIncident
 select * from ResourceFiles
 select * from Package
+select * from tblFiles
+
+
+ALTER TABLE Vacancy ALTER COLUMN JobTitle VARCHAR (50);
+
+
 
 drop table MImage
 

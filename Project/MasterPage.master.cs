@@ -178,7 +178,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         string UserID = Application["UserID"].ToString();
         Application["UserID"] = UserID;
-        Response.Redirect("BusinessPlanner .aspx");
+        Response.Redirect("Planner.aspx");
     }
 
     protected void Finance(object sender, EventArgs e)
@@ -365,9 +365,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         string UserID = Application["UserID"].ToString();
         Application["UserID"] = UserID;
-        Response.Redirect("BusinessPlanner.aspx");
+        Response.Redirect("Planner.aspx");
     }
 
-   
+
 }
 
